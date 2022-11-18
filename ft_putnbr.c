@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgirard- <jgirard-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 14:05:50 by jgirard-          #+#    #+#             */
-/*   Updated: 2022/11/18 16:40:28 by jgirard-         ###   ########.fr       */
+/*   Created: 2022/11/16 14:23:55 by jgirard-          #+#    #+#             */
+/*   Updated: 2022/11/16 15:46:52 by jgirard-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-long	ft_atoi(const char *str)
+void	ft_putnbr(int n)
 {
-	long	i;
-	long	number;
-	int		sign;
-
-	i = 0;
-	number = 0;
-	sign = 1;
-	while (str[i] && (str[i] == 32 || (str[i] >= 9 && str[i] <= 13)))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (n == -2147483648)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		ft_putnbr(-214748);
+		ft_putnbr(3648);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	else if (n < 0)
 	{
-		number = (number * 10) + (str[i] - '0');
-		i++;
+		ft_putchar('-');
+		ft_putnbr(-n);
 	}
-	return (number * sign);
+	else if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putchar(n % 10 + '0');
+	}
+	else
+		ft_putchar(n + '0');
 }

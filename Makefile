@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: juleng <juleng@student.42.fr>              +#+  +:+       +#+         #
+#    By: jgirard- <jgirard-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/24 16:33:52 by jgirard-          #+#    #+#              #
-#    Updated: 2022/09/30 18:36:33 by juleng           ###   ########.fr        #
+#    Updated: 2022/11/16 13:28:39 by jgirard-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ SRCS	= ft_isalpha.c		\
           ft_putchar_fd.c 	\
           ft_putstr_fd.c 	\
           ft_putendl_fd.c 	\
-          ft_putnbr_fd.c 	
+          ft_putnbr_fd.c    \
+          ft_abs.c	        
  
 BONUS	= ft_lstnew_bonus.c 		\
           ft_lstadd_front_bonus.c 	\
